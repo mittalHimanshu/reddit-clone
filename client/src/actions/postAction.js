@@ -1,12 +1,15 @@
 import { FETCH_POSTS, GET_USERNAME } from './types'
 import axios from 'axios'
 
-export const getPosts = username => dispatch => {
+export const getPosts = (history, username) => dispatch => {
     axios.post('/api', { username })
-        .then(res => dispatch({
-            type: FETCH_POSTS,
-            payload: res.data.data.children
-        }))
+        .then(res => { 
+            dispatch({
+                type: FETCH_POSTS,
+                payload: res.data.data.children
+            })
+            history.push('/posts')
+        })
 }
 
 export const getUsername = username => {
