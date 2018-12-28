@@ -8,6 +8,8 @@ class Form extends Component{
     handleSubmit = e => {
         e.preventDefault()
         this.props.getPosts(this.props.history, this.props.details['username'])
+        const { cookies } = this.props
+        cookies.set('username', this.props.details['username'], {path:'/'})
     }
 
     handleInput = e => {
@@ -34,8 +36,9 @@ class Form extends Component{
     }
 }
 
-const mapStateToProps = state => ({
-    details: state.details.details
+const mapStateToProps = (state, ownProps) => ({
+    details: state.details.details,
+    cookies: ownProps.cookies
 })
 
 export default withRouter(connect(mapStateToProps, { getUsername, getPosts }) (Form))

@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
 import './App.css'
 import { Form, Posts} from './components'
-import { Provider } from 'react-redux'
-import {BrowserRouter, Route} from 'react-router-dom'
-import store from './store'
+import {Route} from 'react-router-dom'
+import { withCookies } from 'react-cookie'
+
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Provider store={store}>
-          <div>
-            <Route exact path='/' component={Form} />
-            <Route exact path='/posts' render={() => <Posts />} />
-          </div>
-        </Provider>
-      </BrowserRouter>
+      <div>
+        <Route exact path='/' render= {() => <Form cookies={this.props.cookies} />}  />
+        <Route exact path='/posts' render={() => <Posts cookies={this.props.cookies} />} />
+      </div>
     );
   }
 }
 
-export default App
+export default withCookies(App)

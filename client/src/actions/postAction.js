@@ -8,7 +8,9 @@ export const getPosts = (history, username) => dispatch => {
                 type: FETCH_POSTS,
                 payload: res.data.data.children
             })
-            history.push('/posts')
+            console.log(history)
+            if(history.location.pathname !== '/posts')
+                history.push('/posts')
         })
 }
 

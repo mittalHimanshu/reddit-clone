@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import { getPosts } from '../actions/postAction'
 
 class Posts extends Component {
     render(){
+      const posts = this.props.details['posts']
+      const username = this.props.cookies.get('username')
+      if(posts === null){
+        this.props.getPosts(this.props.history, username)
+        return null
+      }
         return(
           <div>
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
               <a className="navbar-brand mr-auto mr-lg-0" href='/'>Subreddit</a>
               <button type="button" className="btn bg-dark btn-dark " style={{ position: 'absolute', right: 0, marginRight: '35px' }}>
-                {this.props.details['username']}
+                {this.props.details['username'] ? this.props.details['username']: username}
               </button>
             </nav>
             <main role="main" className="container">
@@ -29,8 +37,9 @@ class Posts extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    details: state.details.details
+const mapStateToProps = (state, ownProps) => ({
+    details: state.details.details,
+    cookies: ownProps.cookies
 })
 
-export default connect(mapStateToProps)(Posts)
+export default withRouter(connect(mapStateToProps, {getPosts})(Posts))
