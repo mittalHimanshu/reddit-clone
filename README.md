@@ -1,6 +1,7 @@
 # Reddit-clone
 
 A Full Stack app which uses Node.js, Express.js, React and Redux
+
 A RESTful API is made which will fetch and send response to the client
 
 ## Link
