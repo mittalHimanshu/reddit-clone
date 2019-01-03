@@ -1,6 +1,7 @@
 # Reddit-clone
 
 A Full Stack app which uses Node.js, Express.js, React and Redux
+A RESTful API is made which will fetch and send response to the client
 
 ## Link
 
@@ -23,8 +24,8 @@ redux-thunk: ^2.3.0" |
 
 User will enter a Reddit username
 
-![User enters Username](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/1.PNG)
+![User will enter a Reddit username](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/1.PNG)
 
 App will fetch the posts from the provided username
 
-![Users can now start chatting](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/2.PNG)
+![App will fetch the posts from the provided username](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/2.PNG)
