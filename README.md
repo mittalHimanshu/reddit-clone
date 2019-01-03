@@ -25,7 +25,7 @@ User will enter a Reddit username
 
 ![User enters Username](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/1.PNG)
 
-App will fetch the posts from provided username
+App will fetch the posts from the provided username
 
 ![Users can now start chatting](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/2.PNG)
 
