@@ -28,10 +28,3 @@ User will enter a Reddit username
 App will fetch the posts from the provided username
 
 ![Users can now start chatting](https://mittalhimanshu151.000webhostapp.com/Images/Reddit-Clone/2.PNG)
-
-## License
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](https://github.com/mittalHimanshu/Chat-App/blob/master/LICENSE)**
-- Copyright 2018 © <a href="https://github.com/mittalHimanshu" target="_blank">Himanshu Mittal</a>.
